@@ -1,0 +1,19 @@
+CREATE DATABASE IF NOT EXISTS `evens` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `evens`;
+
+CREATE TABLE IF NOT EXISTS `event_details` (
+`username` varchar(50) NOT NULL,
+`password` varchar(255) NOT NULL,
+`Event_name` varchar(100) NOT NULL,
+`Event_time` varchar(100) NOT NULL,
+`Event_place` varchar(100) NOT NULL,
+`Event_date` varchar(100) NOT NULL,
+`Event_organiser` varchar(100) NOT NULL,
+PRIMARY KEY (`username`)
+)ENGINE=InnoDB CHARSET=utf8;
+
+select * from cams.campaign_details;
+INSERT INTO event_details VALUES ("abc","abc123","event_1","6:00pm","mumbai","15.02.2023","Stefen");
+INSERT INTO event_details VALUES ("xyz","xyz123","event_2","7:00pm","Andhra","17.02.2023","Peter");
+INSERT INTO event_details VALUES ("pqr","pqr123","event_3","8:00pm","Kerala","21.02.2023","Sai");
+select * from `evens`.event_details;
